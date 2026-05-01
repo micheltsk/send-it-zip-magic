@@ -2,7 +2,7 @@ name: Desplegar sitio estático en Pages
 
 on:
   push:
-    branches: ['main']
+    branches: ['principal']
 
 permissions:
   contents: read
