@@ -27,7 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: 'npm'
 
       - name: Instalar dependencias
         run: npm install
@@ -41,6 +41,7 @@ jobs:
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:
+          # Asegúrate de que esta carpeta coincida con la de tu compilación
           path: './dist'
 
       - name: Desplegar en GitHub Pages
