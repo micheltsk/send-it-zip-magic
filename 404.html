@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo...</title>
+  <script>
+    // Redirige a la raíz del proyecto manteniendo la ruta solicitada por el usuario
+    var pathname = window.location.pathname;
+    var repo = "/send-it-zip-magic";
+    
+    // Si hay una subruta, la convierte en un hash para que la SPA de React la lea
+    if (pathname.length > repo.length) {
+        var restOfPath = pathname.substring(repo.length);
+        window.location.href = repo + "/#" + restOfPath;
+    } else {
+        window.location.href = repo + "/";
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
